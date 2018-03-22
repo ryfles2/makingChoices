@@ -1,6 +1,10 @@
 function populate() {
-    if(quiz.isEnded()) {
-        showScores();
+//    if(quiz.isEnded()) {
+//        startGame();
+//    }
+    if(!isQuiz)
+    {
+        startGame();
     }
     else {
         // show question
@@ -29,13 +33,15 @@ function guess(id, guess) {
 
 
 function showProgress() {
-    var currentQuestionNumber = quiz.questionIndex + 1;
-    var element = document.getElementById("progress");
-    element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
+//    var currentQuestionNumber = quiz.questionIndex + 1;
+//    var element = document.getElementById("progress");
+//    element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
+    isQuiz=!isQuiz;
 };
 
-function showScores() {
-    var gameOverHTML = "<h1>Your choice: "+answerGlobal+"</h1>";
+//****************************start game
+function startGame() {
+    var gameOverHTML = "<h1>Now game should start "+"</h1>";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 };
@@ -43,7 +49,7 @@ function showScores() {
 // create questions
 var questions = [
     new Question("Do you want refugees in your school?", ["Yes", "No"], "Yes"),
-    //new Question("Which language is used for styling web pages?", ["CSS", "JQuery"], "CSS")
+    new Question("Which language is used for styling web pages?", ["CSS", "JQuery"], "CSS")
 ];
 
 // create quiz

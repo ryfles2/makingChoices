@@ -14,5 +14,5 @@ Quiz.prototype.guess = function(answer) {
 };
 
 Quiz.prototype.isEnded = function() {
-    return this.questionIndex === this.questions.length;
+    return this.questionIndex === stage; //this.questions.length;
 };

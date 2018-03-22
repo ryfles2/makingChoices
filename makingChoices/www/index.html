@@ -10,14 +10,17 @@
     <div class="grid">
         <div id="quiz">
             <h1 id="question">Question</h1>
-<!--            <p id="question"></p>-->
             <div class="buttons">
                 <button id="btn0"><span id="choice0"></span></button>
                 <button id="btn1"><span id="choice1"></span></button>
             </div> 
         </div>
     </div>
-<script>var answerGlobal = null;</script>
+<script>
+    var answerGlobal = null;
+    var stage = 1;
+    var isQuiz = true;
+</script>
 <script src="js/quiz.js"></script>
 <script src="js/question.js"></script>
 <script src="js/app.js"></script>
